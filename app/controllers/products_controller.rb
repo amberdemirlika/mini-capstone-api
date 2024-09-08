@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   def one
-    render json: { message: "hello" }
+    @product = Product.find_by(id: 3)
+    render template: "products/show"
   end
 end
